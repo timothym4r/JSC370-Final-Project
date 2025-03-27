@@ -9,7 +9,7 @@ output:
 
 This is my JSC370 Final Project website.
 
-```{r source-data, echo=FALSE}
+```{r source-data, echo=FALSE, message=FALSE, warning=FALSE}
 source("process_starbucks_data.R")
 ```
 
