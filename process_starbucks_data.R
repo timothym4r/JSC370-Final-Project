@@ -6,13 +6,10 @@ library(widgetframe)
 library(tidytext)
 
 ### load Starbucks and state-level data ###
-sb_locs <- read_csv("https://raw.githubusercontent.com/JSC370/JSC370-2024/main/labs/lab11/starbucks-locations.csv")
-
-sb_nutr <- read_csv("https://raw.githubusercontent.com/JSC370/JSC370-2024/main/labs/lab11/starbucks-menu-nutrition.csv")
-
-usa_pop <- read_csv("https://raw.githubusercontent.com/JSC370/JSC370-2024/main/labs/lab11/us_state_pop.csv")
-
-usa_states<-read_csv("https://raw.githubusercontent.com/JSC370/JSC370-2024/main/labs/lab11/states.csv")
+sb_locs <- read_csv("https://raw.githubusercontent.com/JSC370/JSC370-2025/refs/heads/main/data/starbucks/starbucks-locations.csv")
+sb_nutr <- read_csv("https://raw.githubusercontent.com/JSC370/JSC370-2025/refs/heads/main/data/starbucks/starbucks-menu-nutrition.csv")
+usa_pop <- read_csv("https://raw.githubusercontent.com/JSC370/JSC370-2025/refs/heads/main/data/starbucks/us_state_pop.csv")
+usa_states<-read_csv("https://raw.githubusercontent.com/JSC370/JSC370-2025/refs/heads/main/data/starbucks/states.csv")
 
 
 ### Merge data ###

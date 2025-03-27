@@ -8,3 +8,50 @@ output:
 ---
 
 This is my JSC370 Final Project website.
+
+```{r source-data, echo=FALSE}
+source("process_starbucks_data.R")
+```
+
+## Showcasing plots {.tabset}
+
+
+---
+
+### 2️⃣ **Interactive Plot 1: Plotly bar chart of Starbucks stores by state**
+
+```{r stores-by-state}
+library(plotly)
+
+plot_ly(
+  data = sb_locs_state |> arrange(desc(n_stores)),
+  x = ~reorder(state, n_stores),
+  y = ~n_stores,
+  type = "bar"
+) |> layout(
+  title = "Number of Starbucks Stores by State",
+  xaxis = list(title = "State"),
+  yaxis = list(title = "Number of Stores")
+)
+```
+
+
+---
+
+### 3️⃣ **Interactive Plot 2: Plotly bar chart of top words in menu items**
+
+```{r top-words}
+plot_ly(
+  data = topwords |> arrange(word_frequency),
+  x = ~word_frequency,
+  y = ~reorder(word, word_frequency),
+  type = "bar",
+  orientation = "h"
+) |> layout(
+  title = "Top 10 Words in Starbucks Menu Items",
+  xaxis = list(title = "Frequency"),
+  yaxis = list(title = "Word")
+)
+```
+
+
